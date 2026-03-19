@@ -1,0 +1,32 @@
+.rightbtn button,
+.herobtn button{
+    padding: 10px 22px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Primary Button */
+
+.rightbtn button{
+    color: white;
+    background-color: #577102;
+    border: none;
+}
+
+.rightbtn button:hover{
+    background-color: #035ca3;
+}
+
+/* Secondary Button */
+
+.herobtn button{
+    background-color: white;
+    color: #577102;
+    border: 2px solid #577102;
+}
+
+.herobtn button:hover{
+    background-color: #577102;
+    color: white;
+}

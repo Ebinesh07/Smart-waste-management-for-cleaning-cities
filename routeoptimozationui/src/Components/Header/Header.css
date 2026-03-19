@@ -1,0 +1,140 @@
+header {
+    background-color: #ffffff;
+    padding: 9px 0px 12px 0px;
+}
+
+.logopart img{
+    width: 320px;
+    margin: -79px -44px;
+    position: absolute;
+}
+
+.toggle{
+    display: none;
+}
+
+.menus {
+    display: inline-block;
+    margin: -10px 329px;
+}
+
+.menus ul{
+    list-style-type: none;
+}
+
+.menus ul li{
+    display: inline-block;
+}
+.menus ul li :hover{
+   background-color: #c2d9e6;
+   border-color: #035ca3;
+   border-radius: 3px;
+   padding: 6px;
+}
+
+.rightmenus {
+    display: inline-flex;
+    margin: -86px 1080px;
+    width: 160px;
+    position: relative;
+    bottom: 11px;
+}
+
+.rightmenus i{
+    position: absolute;
+    margin: 3px -44px;
+    color: #035ca3; 
+    cursor: pointer;
+    font-size: 30px; 
+}
+
+.menus ul li a{
+    text-decoration: none;
+    margin: 0px 18px 0px 0px;
+    color: #0d7636;
+}
+
+/* dropdown parent */
+.supername{
+    position: relative;
+}
+
+/* submenu */
+.submenus{
+    display: none;
+    position: absolute;
+    top: 35px;
+    left:-40px;
+    background: white;
+    flex-direction: column;
+}
+
+/* show submenu only on hover */
+.supername:hover .submenus{
+    display: block;
+}
+
+/* override flex for submenu */
+.submenus li{
+    display: block;
+    margin: 10px 0;
+    width: 150px;
+}
+
+li{
+    margin: 2px;
+    padding: 0px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    .logopart img {
+    width: 221px;
+    margin: -71px -36px;
+    position: absolute;
+    height: 210px;
+    }
+    .toggle{
+        display: block;
+        font-size: 26px;
+        position: absolute;
+        left: 289px;
+        top: 27px;                
+    }
+    .menus{
+        position: relative;
+        top: 49px;
+        right: 453px;
+
+    }
+    .menus ul li{
+        display: block;
+        background-color: #d9e6ed;
+        width: 144px;
+        margin: 10px;
+        padding: 3px;
+    }
+    .rightmenus i{
+        bottom: 216px;
+        font-size: 22px !important;
+        left: 95px;
+    }
+
+    .rightbtn button{
+        left: 78px;
+        position: relative;
+        bottom: 216px;
+        font-size: 12px !important;
+    } 
+
+    .rightmenus {
+        display: inline-flex;
+        position: relative;
+        left: 196px;
+    }
+    }

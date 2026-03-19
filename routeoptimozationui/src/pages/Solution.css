@@ -1,0 +1,92 @@
+/* MAIN SECTION */
+.solution {
+  padding: 80px 8%;
+  background: #e2e8f0;
+}
+
+/* HEADER */
+.solution-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.solution-header h4 {
+    text-align: center;
+    border: 1px solid #577102;
+    color: #577102;
+    margin: 3px 453px;
+    padding: 4px;
+    border-radius: 20px;
+    text-shadow: -1px -1px 5px #577102;
+    background-color: #5771023d;
+    font-size: 23px;
+    position: relative;
+    top: -15px;
+}
+
+.solution-header h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.solution-header p {
+  max-width: 600px;
+  margin: auto;
+  color: #475569;
+}
+
+/* GRID */
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.solution-card {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+/* CARD HOVER */
+.solution-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ICON DEFAULT */
+.solution-card i {
+  font-size: 28px;
+  background: #dbe7c9;
+  color: #4d7c0f;
+  padding: 15px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+/* ICON HOVER EFFECT (IMPORTANT 🔥) */
+.solution-card:hover i {
+  background: #4d7c0f;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* TITLE */
+.solution-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+/* TEXT */
+.solution-card p {
+  color: #475569;
+  line-height: 1.6;
+}
