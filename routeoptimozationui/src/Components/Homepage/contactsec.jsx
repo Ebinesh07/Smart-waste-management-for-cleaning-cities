@@ -1,7 +1,40 @@
 import React from "react";
 import "./Homepage.css";
+import { useState } from "react";
 
 function Contact() {
+
+  const [data,setData]=useState({name:"",email:"",subject:""});
+  const[error,setError]=useState({});
+
+
+  function changedata(userdata){
+    setData({...data,[userdata.target.name]:userdata.target.value})
+  }
+
+  const formValidate=()=>{
+    let temperr={};
+    if (!data.name.trim()){
+      temperr.name="fill the correct name"
+    }
+    if(!data.email){
+      temperr.email="fill the valid email"
+    }
+    if(!data.subject ){
+      temperr.subject="fill  vaild subject "
+    }
+    setError(temperr)
+    return Object.keys(temperr).length === 0;
+  }
+
+  function formsubmit(userdata){
+    userdata.preventDefault()
+    if(formValidate()){
+      console.log(data)
+      setData({name:"",email:"",subjec:""})
+      alert("Request sended successfully...!")
+    }
+  }
   return (
     <section className="contact">
 
@@ -17,18 +50,31 @@ function Contact() {
         <div className="contact-form">
           <h3><i className="bi bi-headset"></i>      Get System Support</h3>
           <p>Tell us your issue and we will respond quickly.</p>
+          
+           <form onSubmit={formsubmit} className="form">
+          {/* <div className="row"> */}
+            <input type="text" name="name" placeholder="Full Name" 
+            value={data.name}
+            onChange={changedata}/>
+            {error.name && <p>{error.name}</p>}
 
-          <div className="row">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
-          </div>
+            <input type="email" name="email" placeholder="Email" 
+            value={data.email}
+            onChange={changedata}/>
+            {error.email && <p>{error.email}</p>}
+          {/* </div> */}
 
-          <input type="text" placeholder="Subject" />
+          <input type="text" name="subject" placeholder="Subject"
+          value={data.subject}
+          onChange={changedata} />
+          {error.subject && <p>{error.subject}</p>}
 
           <textarea placeholder="Describe your issue..." rows="5"></textarea>
 
-          <button>Submit Request →</button>
+          <button type="submit">Submit Request →</button>
+          </form>
         </div>
+        
 
         {/* Right Info */}
         <div className="contact-info">

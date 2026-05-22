@@ -466,6 +466,10 @@ box-shadow:0 5px 20px rgba(0,0,0,0.08);
     color: #5b6772;
     margin-bottom: 20px;
 }
+.form p{
+    color: red;
+    margin-top: -15px;
+}
 
 .row{
 display:flex;
