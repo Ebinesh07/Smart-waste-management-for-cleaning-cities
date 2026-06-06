@@ -3,8 +3,14 @@ import "./Header.css";
 import Logoimg from "../../Assets/logo.png";
 import Mybtn from "../Commondesign/Mybtn";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Menubar(){
+  const [showmenu,setShowmenu]=useState(false)
+
+  function closemenu(){
+  setShowmenu(false)
+}
   return(
     <header>
       <div className="logopart">
@@ -13,30 +19,30 @@ function Menubar(){
           <img src={Logoimg} alt="logo" />
         </div>
 
-        <div className="toggle">
+        <div className="toggle" onClick={()=>{setShowmenu(!showmenu)}}>
           <i className="bi bi-list"></i>
         </div>
 
-        <div className="menus">
+        <div className={showmenu ? "menus active" : "menus"}>
           <ul>
 
-            <li><Link to="/">Home 22222</Link></li>
-            <li><Link to="/service">Service</Link></li>
-            <li><Link to="/solution">Solution</Link></li>
+            <li><Link to="/" onClick={closemenu}>Home</Link></li>
+            <li><Link to="/service" onClick={closemenu}>Service</Link></li>
+            <li><Link to="/solution" onClick={closemenu}>Solution</Link></li>
 
             <li className="supername">
-              <Link to="/how-it-works">How it works</Link>
+              <Link to="/how-it-works" onClick={closemenu}>How it works</Link>
 
               <ul className="submenus">
-                <li><Link to="/dashboard">Live Dashboard</Link></li>
-                <li><Link to="/alerts">Smart Alerts</Link></li>
-                <li><Link to="/route-planning">Route Planning</Link></li>
+                <li><Link to="/dashboard" onClick={closemenu}>Live Dashboard</Link></li>
+                <li><Link to="/alerts" onClick={closemenu}>Smart Alerts</Link></li>
+                <li><Link to="/route-planning" onClick={closemenu}>Route Planning</Link></li>
               </ul>
 
             </li>
 
-            <li><Link to="/features">Features</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/features" onClick={closemenu}>Features</Link></li>
+            <li><Link to="/contact" onClick={closemenu}>Contact Us</Link></li>
 
           </ul>
         </div>

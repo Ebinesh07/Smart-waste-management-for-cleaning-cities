@@ -144,8 +144,9 @@ h3{
 
  @media(min-width: 320px) and (max-width: 480px){
 .footersection {
-    display: block;
-}
+        display: block;
+        height: 200vh;
+    }
 .footerlogo img{
     margin: -16px 123px;
 }

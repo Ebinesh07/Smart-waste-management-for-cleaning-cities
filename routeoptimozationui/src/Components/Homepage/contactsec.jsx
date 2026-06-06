@@ -1,12 +1,12 @@
 import React from "react";
 import "./Homepage.css";
 import { useState } from "react";
+import axios from "axios";
 
 function Contact() {
 
-  const [data,setData]=useState({name:"",email:"",subject:""});
+  const [data,setData]=useState({name:"",email:"",subject:"",textarea:""});
   const[error,setError]=useState({});
-
 
   function changedata(userdata){
     setData({...data,[userdata.target.name]:userdata.target.value})
@@ -23,16 +23,25 @@ function Contact() {
     if(!data.subject ){
       temperr.subject="fill  vaild subject "
     }
+    if(!data.textarea.trim().length>150){
+      temperr.textarea="type your query below 150 leters only"
+    }
     setError(temperr)
     return Object.keys(temperr).length === 0;
   }
 
-  function formsubmit(userdata){
+  async function formsubmit(userdata){
     userdata.preventDefault()
     if(formValidate()){
       console.log(data)
-      setData({name:"",email:"",subjec:""})
+      setData({name:"",email:"",subject:"",textarea:""})
       alert("Request sended successfully...!")
+    }
+    try{
+      await axios.post("http://localhost:13000/Contacts",data)
+    }
+    catch(error){
+      console.error("data is not send to the database",error)
     }
   }
   return (
@@ -69,8 +78,13 @@ function Contact() {
           onChange={changedata} />
           {error.subject && <p>{error.subject}</p>}
 
-          <textarea placeholder="Describe your issue..." rows="5"></textarea>
+          <textarea type="text" name="textarea" placeholder="Describe your issue..." rows="5"
+          value={data.textarea}
+          onChange={changedata}>
+          {error.textarea && <p>{error.textarea}</p>}
 
+          </textarea>
+         
           <button type="submit">Submit Request →</button>
           </form>
         </div>

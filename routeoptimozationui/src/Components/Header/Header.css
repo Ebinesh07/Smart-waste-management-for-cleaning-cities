@@ -92,49 +92,82 @@ li{
 
 
 
-@media (min-width: 320px) and (max-width: 480px){
-    .logopart img {
-    width: 221px;
-    margin: -71px -36px;
-    position: absolute;
-    height: 210px;
+@media (min-width:320px) and (max-width:480px){
+
+    header{
+        width:100%;
+        padding:10px 15px;
+        position:relative;
+        overflow:visible;
     }
+
+    .logopart img{
+        width: 200px;
+        height: auto;
+        margin: -67px -33px !important;
+        position: static;
+    }
+
     .toggle{
-        display: block;
-        font-size: 26px;
-        position: absolute;
-        left: 289px;
-        top: 27px;                
+        display:block;
+        font-size:28px;
+        position:absolute;
+        top:7px;
+        right:20px;
+        cursor:pointer;
+        z-index:1000;
     }
+
     .menus{
-        position: relative;
-        top: 49px;
-        right: 453px;
-
+        display:none;
+        width:100%;
+        position:absolute;
+        top:70px;
+        left:0;
+        background:#ffffff;
+        margin:0 !important;
+        padding:10px 0 !important;
+        z-index:999;
     }
+
+    .menus.active{
+        display:block;
+    }
+
+    .menus ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+
     .menus ul li{
-        display: block;
-        background-color: #d9e6ed;
-        width: 144px;
-        margin: 10px;
-        padding: 3px;
-    }
-    .rightmenus i{
-        bottom: 216px;
-        font-size: 22px !important;
-        left: 95px;
+        display:block;
+        width:90%;
+        margin:10px auto;
+        padding:12px;
+        text-align:center;
+        background:#d9e6ed;
+        border-radius:5px;
     }
 
-    .rightbtn button{
-        left: 78px;
-        position: relative;
-        bottom: 216px;
-        font-size: 12px !important;
-    } 
+    .menus ul li a{
+        font-size:16px;
+        text-decoration:none;
+        color:#0d7636;
+    }
 
-    .rightmenus {
-        display: inline-flex;
-        position: relative;
-        left: 196px;
+    .rightmenus{
+        display:none;
     }
+
+    .rightbtn{
+        display:none;
     }
+
+    .submenus{
+        position:static;
+        width:100%;
+        background:#edf4f7;
+        margin-top:10px;
+    }
+}

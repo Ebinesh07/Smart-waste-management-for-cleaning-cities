@@ -534,3 +534,248 @@ color: #577102;
     margin: 0px 0px; 
 
 }
+
+
+@media (min-width:320px) and (max-width:480px){
+
+/* HERO SECTION */
+
+.herosection{
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.herocontent{
+    max-width: 100%;
+}
+
+.herocontent h4{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.herocontent h1{
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.herocontent p{
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.herobutton{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imagesec img{
+    width: 100%;
+    margin: 30px 0px 0px 0px;
+}
+
+/* FEATURE CARD */
+
+.feature-card{
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+}
+
+/* STATISTICS */
+
+.statisticssection{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.statisticssection h1{
+    margin: 0;
+}
+
+/* WAVE */
+
+.statisticssection2{
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+.stat-card h2{
+    margin: 0;
+    font-size: 32px;
+}
+
+.stat-card p{
+    margin: 10px 0px;
+}
+
+/* SERVICE SECTION */
+
+.sevicesection h4{
+    margin: 0px 40px;
+    top: 40px;
+    font-size: 18px;
+}
+
+.sevicesection h1{
+    font-size: 32px;
+    margin: 60px 0px 20px;
+}
+
+.sevicesection p{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0px 20px 30px;
+    font-size: 16px;
+}
+
+/* SERVICE GRID */
+
+.servicegridcards{
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+.solution{
+    padding:40px 20px !important;
+    min-height:auto !important;
+    height:auto !important;
+}
+
+.solution-header h4 {
+margin: 0px 63px !important;
+}
+
+.solution h1{
+    margin-top:20px !important;
+}
+
+.solution-cards{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
+    width:100%;
+}
+
+.solution-card{
+    width:90%;
+    margin:0 auto;
+}
+
+.grids{
+    width: 90%;
+    margin: 20px 0px;
+}
+
+/* HOW IT WORKS */
+
+.howitworks h1{
+    width: 100%;
+    margin: 60px 0px 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.howitworkssec h4{
+    margin: 0px 40px;
+    top: 40px;
+    font-size: 18px;
+}
+
+.howitworkssec p{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0px 20px 30px;
+    font-size: 16px;
+}
+
+.steps{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.steps::before{
+    display: none;
+}
+
+.step{
+    margin: 0;
+}
+
+/* FEATURES */
+
+.features{
+    padding: 50px 20px;
+}
+
+.features-header h4{
+    margin: 0px 40px;
+    font-size: 18px;
+}
+
+.features-header h1{
+    width: 100%;
+    margin: 30px 0px 15px;
+    font-size: 32px;
+}
+
+.features-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card1,
+.feature-card2{
+    width: 100%;
+}
+
+/* CONTACT */
+
+.contact{
+    padding: 50px 20px;
+}
+
+.contact-header{
+    padding: 20px;
+}
+
+.contact-header h2{
+    margin: 0px 20px;
+    top: 0;
+    font-size: 20px;
+}
+
+.contact-header p{
+    margin: 20px 0px 0px;
+    font-size: 16px;
+}
+
+.contact-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form,
+.contact-info{
+    width: 100%;
+}
+
+.row{
+    flex-direction: column;
+    gap: 0;
+}
+
+}
